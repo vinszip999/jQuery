@@ -1,0 +1,32 @@
+<!-- 부모로 감싸기 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element_ex3</title>
+    <style>
+        div {
+        border:2px blue solid;
+        margin:2px;
+        padding:2px;
+        }
+        p {
+        background:yellow;
+        margin:2px;
+        padding:2px;
+        }
+        strong {
+        color:red;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <span>Span Text</span>
+  <strong>What about me?</strong>
+  <span>Another One</span>
+  <script>$("span").wrap("<div><div><p><em><b></b></em></p></div></div>");</script>
+</body>
+</html>

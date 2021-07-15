@@ -1,0 +1,28 @@
+<!-- live를 이용하면 존재하지 않는 엘리먼트에 대해서 이벤트를 설치할 수 있다. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event_ex3</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      function clickHandler(e) {
+        alert('thank you!!');
+      }
+      $('#click_me').live('click', clickHandler);
+      $('#remove_event').live('click', function(e) {
+        $('#click_me').die('click', clickHandler);
+      });
+      $('#trigger_event').live('click', function(e) {
+        $('#click_me').trigger('click');
+      });
+    </script>
+</head>
+<body>
+    <input id="click_me" type="button" value="click me" />
+<input id="remove_event" type="button" value="unbind" />
+<input id="trigger_event" type="button" value="trigger" />
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- traversin을 이용해서 chain안에서 대상을 움직일 수 있다. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chain_ex3</title>
+</head>
+<body>
+<ul class="first">
+    <li class="foo"> list item 1 </li>
+    <li> list item 2 </li>
+    <li class="bar"> list item 3 </li>
+</ul>
+<ul class="second">
+    <li class="foo"> list item 1 </li>
+    <li> list item 2 </li>
+    <li class="bar"> list item 3 </li>
+</ul>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">$('ul.first').find('.foo').css('background-color', 'red').end().find('.bar').css('background-color', 'green');</script>
+</body>
+</html>
